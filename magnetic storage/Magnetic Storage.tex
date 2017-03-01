@@ -48,19 +48,27 @@
 \begin{document}
 
 \maketitle
+
+\begin{abstract}
+Magnetic storage, an essential part of a technologically integrated life, serves as a showcase of the far reaching properties of electromagnetism. The storage component relies on the semi-permanent qualities of magnetic hysteresis to manipulate magnetic media. Reading and writing to magnetic media capitalizes on magnetic flux, by moving the magnetic media relative to a sensor head. The development of the Giant Magnetoresistive based sensor heads alongside improved magnetic media are the primary factors in minimizing space and maximizing sensitivity in magnetic storage, though we are rapidly approaching a hard theoretical limit.  The principles discussed above are presented in reasonable depth and connected to fundamental concepts in undergraduate physics.
+\end{abstract}
 \thispagestyle{fancy}
 
 \begin{multicols}{2} %begin multiple columns
 From holding music, photographs, and other important documents at home, to providing the basis of a credit card and other magnetic swipe identification cards, the proliferation of magnetic storage is easily one of the biggest additions to a technologically integrated life. Magnetic storage exploits the properties of magnetization as well as electrodynamic interactions in systems to provide dense and rapid access of information, with the development of giant magnetoresistive based sensor heads only serving to improve these factors by several orders of magnitude.
 
+\begin{center}
+	\centering
+	\includegraphics[width=0.48\textwidth]{HDD_Makeup.png}
+	{\footnotesize\textbf{Figure 3:} The breakdown of a HDD can be seen. The actual part where the EM phenomena takes place is an incredibly tiny component in comparison to the rest of the drive\textsubscript{\cite{label6}}. The Magnetic flux is generated from the rotation of the recording layer. }
+\end{center} 
 
-
-On the surface level, magnetic storage is fairly straightforward. Ferromagnetic material, once induced with a magnetic field, will keep alignment with that magnetic field until sufficient heat or magnetization is provided to overcome the field strength. If an oppositely aligned magnetic field is strong enough, it breaks the alignment of the ferromagnetic material and establishes a field antiparallel to the first one. This phenomenon of a permanently aligned magnetic field is known as magnetic hysteresis \cite{label1}.
+On the surface level, magnetic storage is fairly straightforward. Ferromagnetic material, once induced with a magnetic field, will keep alignment with that magnetic field until sufficient heat or magnetization is provided to overcome the field strength. If an oppositely aligned magnetic field is strong enough, it breaks the alignment of the ferromagnetic material and establishes a field antiparallel to the first one. This phenomenon of a permanently aligned magnetic field is known as magnetic hysteresis\textsubscript{\cite{label1}}.
 
 \begin{center}
 	\centering
 	\includegraphics[width=0.48\textwidth]{mag_hysterisis.png}
-	{\footnotesize\textbf{Figure 1:} Different ferromagnetic materials exhibit different coercivities, or the resistance a magnetic material has to changes in magnetization, this has a very wide application in magnetic storage, in both storage and sensor methods. \cite{label7}} 
+	{\footnotesize\textbf{Figure 1:} Different ferromagnetic materials exhibit different coercivities, or the resistance a magnetic material has to changes in magnetization, this has a very wide application in magnetic storage, in both storage and sensor methods.\textsubscript{\cite{label7}}}
 \end{center} 
 
 The phenomenon of magnetic hysteresis forms the basis of magnetic storage. It conceptually helps to break down the the ferromagnetic medium into discrete chunks, or bits that are a consequence of linear storage density, (a product of wavelength ($\lambda$), medium speed (U), recording frequency (f) and linear flux density (k)):
@@ -71,26 +79,19 @@ The appropriate recording wavelength is equivalent to the discrete chunk. The on
 \begin{center}
 	\centering
 	\includegraphics[width=0.48\textwidth]{Waveform_code.png}
-	{\footnotesize\textbf{Figure 2:}  A) NRZI code and B) waveform of the current\cite{label1}} 
-\end{center} 
-\cite{label1} A) NRZI code and B) waveform of the current
-As can be seen here, a common interpretation is non-return-to-zero inverted, wherein the value 1 indicates a change in the magnetization recorded and 0 indicates no change. This leads to data reading functioning as a Toggle Flip-Flop that is, the NRZI code will stay on (1) until the opposite value is returned. Writing is done when the head current is powered strongly enough to invert the magnetic field of the bit \cite{label1}. 
-
-Below, the breakdown of a HDD can be seen. The actual part where the EM phenomena takes place is an incredibly tiny component in comparison to the rest of the drive\cite{label6}. The Magnetic flux is generated from the rotation of the recording layer. 
-\begin{center}
-	\centering
-	\includegraphics[width=0.48\textwidth]{HDD_Makeup.png}
-	{\footnotesize\textbf{Figure 3:} As shown below in the graph by Wood, the theoretical model of recording density growth begins to slow down as the superparamagnetic limit is approached, close to 1 Terabit/sq. in.. Higher densities simply result in thermally unstable materials as well as unusable signal-to-noise ratios. The huge jump in the 1990’s and mid 2000’s is due to the development and application of GMR sensors. \cite{label6}} 
+	{\footnotesize\textbf{Figure 2:}  A) NRZI code and B) waveform of the current. As can be seen here, a common interpretation is non-return-to-zero inverted, wherein the value 1 indicates a change in the magnetization recorded and 0 indicates no change. This leads to data reading functioning as a Toggle Flip-Flop that is, the NRZI code will stay on (1) until the opposite value is returned. Writing is done when the head current is powered strongly enough to invert the magnetic field of the bit\textsubscript{\cite{label1}}}.
 \end{center} 
 
 
-Delving deeper into the underlying phenomena behind sensing the magnetic fields used in magnetic storage, one needs to be made aware of Giant Magnetoresistance (GMR). GMR is crucial to sensing external magnetic fields at low field strengths and at small sizes, as GMR is a quantum phenomenon. It was discovered by Grunberg and Fert through studying the interactions of layered sheets of Fe/Cr/Fe. It was found that antiparallel magnetic alignment of the ferromagnetic layers results in a higher resistivity \cite{label5}. Experimental research is done to find the optimal layer composition and layout, but the most useful structure is the subgroup of spin-valve sensors, which serve as one of the basises for Read/Write heads for magnetic storage devices.
+
+
+Delving deeper into the underlying phenomena behind sensing the magnetic fields used in magnetic storage, one needs to be made aware of Giant Magnetoresistance (GMR). GMR is crucial to sensing external magnetic fields at low field strengths and at small sizes, as GMR is a quantum phenomenon. It was discovered by Grunberg and Fert through studying the interactions of layered sheets of Fe/Cr/Fe. It was found that antiparallel magnetic alignment of the ferromagnetic layers results in a higher resistivity\textsubscript{\cite{label5}}. Experimental research is done to find the optimal layer composition and layout, but the most useful structure is the subgroup of spin-valve sensors, which serve as one of the basises for Read/Write heads for magnetic storage devices.
 
 In the Fuchs-Sondheimer model, GMR is evaluated by assuming that GMR is based upon spin-dependent scattering mechanisms, as well as the relative length of the mean free paths in relation to the thickness of various layers. The FS model is a highly simplified model of electron transport in thin metal films, only requiring the two parameters in order to function. This means that while it works nicely in theory, it’s a lot harder to expand upon experimentally due to the myriad of interactive factors in a real metal film. Camley and Barnas take it upon themselves to expand upon the FS model to make it experimentally viable. They include spin-dependent coefficients for specular reflection, transmission, and diffuse scattering, by making the assumptions that the metals involved are equivalent simple metals, and that there is no angular dependence on scattering.The basis of computing the conductivity begins through application of the Boltzmann equation
 \begin{align*}
 \dfrac{dg}{dz}+ g τ*v_z = e*\dfrac{E}{m}*v_z \dfrac{df_0}{dv_x}
 \end{align*}
-$f_0$ is the equilibrium distribution function, which accounts for the number of particles per unit volume, this is important for discussing conductivity in terms of scattering probabilities, as the particle density will influence scattering probability. The term g is the correction in the distribution function from an external E field in the x direction, this accounts for the scattering probabilities from particle and film orientation as a particle travels through a multilayer system. It should be noted that terms which involve magnetic field effects are discarded due to the relatively irrelevant size in regard to the calculations done \cite{label2}. 
+$f_0$ is the equilibrium distribution function, which accounts for the number of particles per unit volume, this is important for discussing conductivity in terms of scattering probabilities, as the particle density will influence scattering probability. The term g is the correction in the distribution function from an external E field in the x direction, this accounts for the scattering probabilities from particle and film orientation as a particle travels through a multilayer system. It should be noted that terms which involve magnetic field effects are discarded due to the relatively irrelevant size in regard to the calculations done\textsubscript{\cite{label2}}. 
 
 The value for g takes into account many contributions from spin up and spin down electrons moving in the positive and negative direction in the various layers, where we end up with about 8 different g contributions for the total correction. Once g is found, the current density, similar to  the simple cases in electromagnetism,  can be evaluated:
 \begin{align*}
@@ -103,21 +104,21 @@ Which can then be used to find the effective resistivity. The theory predicts th
 \begin{align*}
 N = D \uparrow D \downarrow 
 \end{align*}
-D↑ is a measurement of interface roughness, and N is the asymmetry in up down scattering. An increase in D↑ or N should also increase magnetoresistance \cite{label2}). Camley and Barnas measured the resistance change as a function of applied field, the angle used in the calculation of the magnetization differences was found through minimizing the sum of exchange, anisotropy, and Zeeman energies, as discussed earlier, the relative angle between the reference and free layer will determine the change in resistivity, and consequently, magnetization. As demonstrated by Camley and Barnas, the theoretical model is reasonably accurate in comparison to experimental results, but the differences can be accounted for the lack of incorporation of magnetoresistive anisotropy in the theoretical calculations. 
+D↑ is a measurement of interface roughness, and N is the asymmetry in up down scattering. An increase in D↑ or N should also increase magnetoresistance \textsubscript{\cite{label2}}. Camley and Barnas measured the resistance change as a function of applied field, the angle used in the calculation of the magnetization differences was found through minimizing the sum of exchange, anisotropy, and Zeeman energies, as discussed earlier, the relative angle between the reference and free layer will determine the change in resistivity, and consequently, magnetization. As demonstrated by Camley and Barnas, the theoretical model is reasonably accurate in comparison to experimental results, but the differences can be accounted for the lack of incorporation of magnetoresistive anisotropy in the theoretical calculations. 
 
 \begin{center}
 	\centering
 	\includegraphics[width=0.48\textwidth]{exp_vs_theory.png}
-	{\footnotesize\textbf{Figure 3:}\cite{label6}} 
+	{\footnotesize\textbf{Figure 3:}\textsubscript{\cite{label6}}}
 \end{center} 
 
 
-Spin-valve sensors, at the most basic, comprise of a fixed magnetic layer, a nonmagnetic spacer, and a magnetic layer that can change its orientation \cite{label3}. Measurements  are done through comparison of the magnetization vector of the free layer to the reference layer. GMR resistance values change based on the relative position of the free layer. So in practice, bits in the same alignment as the reference layer pass through a lower resistance, and bits in the opposite alignment will pass a higher resistance, usually around 10 percent of a change in total resistance, resulting in a basic sensitivity of 20 mV. For consistency, Spin-valve sensors and other GMR sensors are used in a wheatstone bridge configuration to correct for inhomogeneous magnetic fields. The continuing experimental challenge is to make these sensors smaller and smaller and even more sensitive to account for increased storage density.
+Spin-valve sensors, at the most basic, comprise of a fixed magnetic layer, a nonmagnetic spacer, and a magnetic layer that can change its orientation\textsubscript{ \cite{label3}}. Measurements  are done through comparison of the magnetization vector of the free layer to the reference layer. GMR resistance values change based on the relative position of the free layer. So in practice, bits in the same alignment as the reference layer pass through a lower resistance, and bits in the opposite alignment will pass a higher resistance, usually around 10 percent of a change in total resistance, resulting in a basic sensitivity of 20 mV. For consistency, Spin-valve sensors and other GMR sensors are used in a wheatstone bridge configuration to correct for inhomogeneous magnetic fields. The continuing experimental challenge is to make these sensors smaller and smaller and even more sensitive to account for increased storage density.
 
 \begin{center}
 	\centering
 	\includegraphics[width=0.48\textwidth]{region_of_stability.png}
-	{\footnotesize\textbf{Figure 5:}. \cite{label6}} 
+	{\footnotesize\textbf{Figure 5:} As shown below in the graph by Wood, the theoretical model of recording density growth begins to slow down as the superparamagnetic limit is approached, close to 1 Terabit/sq. in.. Higher densities simply result in thermally unstable materials as well as unusable signal-to-noise ratios. The huge jump in the 1990’s and mid 2000’s is due to the development and application of GMR sensors.\textsubscript{\cite{label6}}} 
 \end{center} 
 
 
